@@ -51,6 +51,7 @@ dns-dnsmadeeasy
 dns-duckdns
 dns-dreamhost
 dns-dynu
+dns-eurodns
 dns-gehirn
 dns-godaddy
 dns-google
@@ -61,7 +62,7 @@ dns-joker
 dns-linode
 dns-loopia
 dns-luadns
-dns-mijn-host (currently disable - see changelog)
+dns-mijn-host
 dns-njalla
 dns-noris
 dns-simply
@@ -105,6 +106,8 @@ dnsmadeeasy_api_key: ''
 dnsmadeeasy_secret_key: ''
 duckdns_token: ''
 dynu_auth_token: ''
+eurodns_applicationId: ''
+eurodns_apiKey: ''
 google_creds: ''
 hetzner_api_token: ''
 gehirn_api_token: ''
@@ -977,6 +980,26 @@ dns:
 </details>
 
 <details>
+  <summary>Eurodns DNS challenge</summary>
+
+  You can configure the APP id and the API key in the API Users area of the Eurodns control panel: https://my.eurodns.com/apiusers
+
+```yaml
+domains:
+  - your.domain.tld
+certfile: fullchain.pem
+keyfile: privkey.pem
+challenge: dns
+dns:
+  provider: dns-eurodns
+  eurodns_applicationId: X-APP-ID
+  eurodns_apiKey: X-API-KEY
+  propagation_seconds: 60
+```
+
+</details>
+
+<details>
 
   <summary>WebSupport (currently disable - see changelog)</summary>
 
@@ -1088,7 +1111,7 @@ The API key assigned to your Simply.com account can be found in your Simply.com 
 
 
 <details>
-  <summary>mijn.host DNS challenge (currently disable - see changelog)</summary>
+  <summary>mijn.host DNS challenge</summary>
 
   ```yaml
   email: your.email@example.com
@@ -1130,6 +1153,7 @@ dns-dnsmadeeasy
 dns-duckdns
 dns-dreamhost
 dns-dynu
+dns-eurodns
 dns-gehirn
 dns-google
 dns-hetzner
@@ -1138,7 +1162,7 @@ dns-ionos
 dns-linode
 dns-loopia
 dns-luadns
-dns-mijn-host (currently disable - see changelog)
+dns-mijn-host
 dns-njalla
 dns-noris
 dns-plesk

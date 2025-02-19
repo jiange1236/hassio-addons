@@ -14,6 +14,7 @@ ARG \
     CERTBOT_DNS_DREAMHOST_VERSION \
     CERTBOT_DNS_DUCKDNS_VERSION \
     CERTBOT_DNS_DYNU_VERSION \
+    CERTBOT_DNS_EURODNS_VERSION \
     CERTBOT_DNS_EASYDNS_VERSION \
     CERTBOT_DNS_HURRICANE_ELECTRIC_VERSION \
     CERTBOT_DNS_HETZNER_VERSION \
@@ -64,6 +65,7 @@ RUN \
         certbot-dns-dnsmadeeasy==${CERTBOT_VERSION} \
         certbot-dns-duckdns==${CERTBOT_DNS_DUCKDNS_VERSION} \
         certbot-dns-dynu-dev==${CERTBOT_DNS_DYNU_VERSION} \
+        certbot-dns-eurodns==${CERTBOT_DNS_EURODNS_VERSION} \
         certbot-dns-gehirn==${CERTBOT_VERSION} \
         certbot-dns-godaddy==${CERTBOT_DNS_GODADDY_VERSION} \
         certbot-dns-google==${CERTBOT_VERSION} \
@@ -74,8 +76,7 @@ RUN \
         certbot-dns-linode==${CERTBOT_VERSION} \
         certbot-dns-loopia==${CERTBOT_DNS_LOOPIA_VERSION} \
         certbot-dns-luadns==${CERTBOT_VERSION} \
-        # Disabled due to unresolved issues
-        # certbot-dns-mijn-host==${CERTBOT_DNS_MIJN_HOST_VERSION} \
+        certbot-dns-mijn-host==${CERTBOT_DNS_MIJN_HOST_VERSION} \
         certbot-dns-njalla==${CERTBOT_NJALLA_VERSION} \
         certbot-dns-norisnetwork==${CERTBOT_DNS_NORISNETWORK_VERSION} \
         certbot-dns-nsone==${CERTBOT_VERSION} \
